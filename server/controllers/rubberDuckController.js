@@ -62,11 +62,17 @@ const updateDuck = (req, res) => {
     res.status(200).json({ duck: updatedDuck });
 };
 
+const getData  = (req, res)=>{
+    res.json({ message: "This is a demo API route" });
+};
+
+
 export {
     getAllDucks,
     getRandomDuck,
     getSingleDuck,
     createDuck,
     deleteDuck,
-    updateDuck
+    updateDuck,
+    getData
 };

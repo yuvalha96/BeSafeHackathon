@@ -6,6 +6,7 @@ import {
     deleteDuck,
     updateDuck,
     getRandomDuck,
+    getData,
 } from '../controllers/rubberDuckController.js';
 
 const router = express.Router();
@@ -23,9 +24,7 @@ router.get('/random', getRandomDuck);
 router.get('/:id', getSingleDuck)
 
 // a demo route
-router.get('/demo', (req, res) => {
-    res.json({ message: "This is a demo API route" });
-});
+router.get('/demo', getData )
 
 /**
  * Read and Write Permission Routes

@@ -24,7 +24,7 @@ router.get('/random', getRandomDuck);
 router.get('/:id', getSingleDuck)
 
 // a demo route
-router.get('/demo', getData )
+router.post('/demo', getData)
 
 /**
  * Read and Write Permission Routes

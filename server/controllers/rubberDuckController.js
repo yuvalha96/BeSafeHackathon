@@ -62,8 +62,10 @@ const updateDuck = (req, res) => {
     res.status(200).json({ duck: updatedDuck });
 };
 
-const getData  = (req, res)=>{
-    res.json({ message: "This is a demo API route" });
+const getData = (req, res) => {
+    const { name, idNumber, age } = req.body;
+    console.log(`Name: ${name}, ID Number: ${idNumber}, Age: ${age}`);
+    res.json({ message: "Data received successfully", data: { name, idNumber, age } });
 };
 
 

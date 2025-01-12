@@ -22,6 +22,11 @@ router.get('/random', getRandomDuck);
 // GET a single duck
 router.get('/:id', getSingleDuck)
 
+// a demo route
+router.get('/demo', (req, res) => {
+    res.json({ message: "This is a demo API route" });
+});
+
 /**
  * Read and Write Permission Routes
  */

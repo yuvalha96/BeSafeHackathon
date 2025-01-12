@@ -3,14 +3,17 @@
 import PropTypes from 'prop-types';
 import OrganizationCard from '../OrganizationCard/OrganizationCard';
 import styles from './Board.module.css';
+import RelaxSection from '../button/RelaxSection'
 
 function Board({ organizations }) {
   return (
-    <div className={styles.board}>
+    <><div className={styles.board}>
       {organizations.map((org, index) => (
         <OrganizationCard key={index} organization={org} />
       ))}
-    </div>
+    </div><div className={styles.Board}>
+      {RelaxSection && <RelaxSection />}
+      </div></>
   );
 }
 

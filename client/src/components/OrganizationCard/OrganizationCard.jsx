@@ -10,8 +10,11 @@ const OrganizationCard = ({ organization }) => {
       <p>{organization.description}</p>
       <a href={`mailto:${organization.email}`}>{organization.email}</a>
       <a href={`tel:${organization.phone}`}>{organization.phone}</a>
-      <a href={organization.website} target="_blank" rel="noopener noreferrer">
+      {/* <a href={organization.website} target="_blank" rel="noopener noreferrer">
         {organization.website}
+      </a> */}
+      <a href={organization.website} target="_blank" rel="noopener noreferrer">
+        Visit Website
       </a>
     </div>
   );

@@ -1,0 +1,54 @@
+/* Container for the board */
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* Style for each card (individual OrganizationCard) */
+  .card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Title of the board */
+  .boardTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Individual elements inside each card (like the name, description, etc.) */
+  .cardContent {
+    margin-bottom: 10px;
+  }
+  
+  .cardContent h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .cardContent p {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .cardContent a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .cardContent a:hover {
+    text-decoration: underline;
+  }

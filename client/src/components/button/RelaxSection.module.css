@@ -1,0 +1,17 @@
+.relaxSection {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.relaxSection h6 {
+    margin-bottom: 16px;
+}
+
+.relaxSection button {
+    background-color: #ff6f61;
+    color: white;
+}
+
+.relaxSection button:hover {
+    background-color: #ff4a3d;
+}

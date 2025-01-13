@@ -1,15 +1,26 @@
 .home {
   display: flex;
-  flex-direction: column; /* משנה את כיוון הפריסה לעמודה */
-  align-items: center; /* ממרכז את כל האלמנטים אופקית */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; 
   padding: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex: 2;
+
+  flex-direction: column;
+  align-items: center;
+  text-align: right; /* מבטיח שכל הטקסטים בתוך הקונטיינר מימין */
+  width: 100%; /* מתאים את הרוחב */
 }
 
 .headline {
   font-family: 'Calibri';
+  text-align: center; /* ממקם את הטקסט מימין */
   font-size: 3.8em;
-  color: #000000;
-  align-items: right;
+  color: #151235;
   letter-spacing: 12px;
   width: 70%;
   margin-bottom: 20px;
@@ -18,9 +29,10 @@
 .subheading {
   font-family: 'Calibri'; 
   font-size: 1.6em;
-  color: #694bff;
+  font-weight: bold;
+  color: #1b1180;
   line-height: 1.5;
-  align-items: right;
+  text-align: center; /* ממקם את הטקסט מימין */
   margin-bottom: 10px; /* מוסיף רווח מתחת */
   width: 70%;
 }
@@ -30,20 +42,15 @@
   font-size: 1.6em;
   color: #000000;
   line-height: 1.5;
-  text-align: right; /* ממקם את הטקסט מימין */
+  text-align: center; /* ממקם את הטקסט מימין */
   margin-bottom: 20px; /* מוסיף רווח מתחת */
   width: 70%;
 }
 
 .image {
-  height: 650px;
-  margin-bottom: 30px; /* מוסיף רווח מתחת לתמונה */
-}
-
-
-.text-container {
-  text-align: right; /* מבטיח שכל הטקסטים בתוך הקונטיינר מימין */
-  width: 100%; /* מתאים את הרוחב */
+  flex: 1;
+height: 650px;
+margin-bottom: 30px; /* מוסיף רווח מתחת לתמונה */
 }
 
 .start-button {

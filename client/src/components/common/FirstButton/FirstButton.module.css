@@ -23,8 +23,5 @@
   
 .button-container {
   text-align: center; /* ממרכז אופקית */
-  display: block; /* מבטל את המיקום האנכי */
   margin-top: 20px; /* מוסיף רווח מעל הכפתור */
-  width: 100%; /* מתאים את הרוחב */
-  position: static; /* מבטל מיקום מוחלט */
 }

@@ -22,6 +22,8 @@ app.use(cors({
 // Use the routes file for all `/ducks` routes
 app.use('/ducks', rubberDuckRoutes);
 
+app.use('/api/ducks', rubberDuckRoutes);
+
 // Start server
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -1,0 +1,14 @@
+.recommendationPage {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .recommendationPage h4 {
+    margin-bottom: 16px;
+  }
+  
+  .recommendationPage a {
+    color: #007bff;
+    text-decoration: none;
+  }

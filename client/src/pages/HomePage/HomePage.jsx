@@ -69,7 +69,8 @@ const Home = () => {
         </button>
       </form>
     </div>
+
   );
 };
 
-export default Home;
+export default HomePage;

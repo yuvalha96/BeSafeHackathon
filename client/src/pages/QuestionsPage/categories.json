@@ -1,0 +1,152 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "question": "מהו גילך?",
+        "options": [
+          { "value": "under_18", "text": "מתחת ל-18" },
+          { "value": "18_35", "text": "18-35" },
+          { "value": "36_60", "text": "36-60" },
+          { "value": "over_60", "text": "מעל 60" }
+        ]
+      },
+      {
+        "id": 2,
+        "question": "מה המגדר שלך?",
+        "options": [
+          { "value": "male", "text": "זכר" },
+          { "value": "female", "text": "נקבה" },
+          { "value": "other", "text": "אחר" }
+        ]
+      },
+      {
+        "id": 3,
+        "question": "האם הדיווח עוסק בך באופן אישי?",
+        "options": [
+          { "value": "yes", "text": "כן" },
+          { "value": "no", "text": "לא" }
+        ]
+      },
+      {
+        "id": 4,
+        "question": "מתי התחיל מקרה הפגיעה?",
+        "options": [
+          { "value": "last_week", "text": "בשבוע האחרון" },
+          { "value": "last_month", "text": "בחודש האחרון" },
+          { "value": "more_than_month", "text": "לפני יותר מחודש" }
+        ]
+      },
+      {
+        "id": 5,
+        "question": "האם מדובר בפגיעה מינית?",
+        "options": [
+          { "value": "yes", "text": "כן" },
+          { "value": "no", "text": "לא" }
+        ]
+      },
+      {
+        "id": 6,
+        "question": "האם חווית או ראית תמונות גרפיות קשות?",
+        "options": [
+          { "value": "yes", "text": "כן" },
+          { "value": "no", "text": "לא" }
+        ]
+      },
+      {
+        "id": 7,
+        "question": "מה אופי הפגיעה?",
+        "options": [
+          { "value": "physical", "text": "אלימות פיזית" },
+          { "value": "emotional", "text": "אלימות נפשית" },
+          { "value": "cyber_extortion", "text": "סחיטה ברשת" },
+          { "value": "content_distribution", "text": "הפצת תוכן אישי" },
+          { "value": "other", "text": "אחר" }
+        ]
+      },
+      {
+        "id": 8,
+        "question": "האם מדובר במקרי אלימות במשפחה?",
+        "options": [
+          { "value": "yes", "text": "כן" },
+          { "value": "no", "text": "לא" }
+        ]
+      },
+      {
+        "id": 9,
+        "question": "מה הרקע שלך מבחינת תרבות או דת?",
+        "options": [
+          { "value": "secular", "text": "חילוני/ת" },
+          { "value": "religious", "text": "דתי/ה" },
+          { "value": "ultra_orthodox", "text": "חרדי/ה" },
+          { "value": "muslim", "text": "מוסלמי/ת" },
+          { "value": "other", "text": "אחר" }
+        ]
+      },
+      {
+        "id": 10,
+        "question": "האם אתה/את חוששים לספר על המקרה לקרובים אליך?",
+        "options": [
+          { "value": "yes", "text": "כן" },
+          { "value": "no", "text": "לא" },
+          { "value": "unsure", "text": "לא בטוחים" }
+        ]
+      },
+      {
+        "id": 11,
+        "question": "האם מדובר בפגיעה שחוזרת על עצמה?",
+        "options": [
+          { "value": "yes", "text": "כן" },
+          { "value": "no", "text": "לא" },
+          { "value": "unsure", "text": "לא בטוחים" }
+        ]
+      },
+      {
+        "id": 12,
+        "question": "מהי רמת המיידיות של הפגיעה?",
+        "options": [
+          { "value": "immediate_danger", "text": "אני מרגיש/ה בסכנה מיידית" },
+          { "value": "not_immediate", "text": "אין סכנה מיידית, אבל המקרה מדאיג" },
+          { "value": "unsure", "text": "לא בטוח/ה" }
+        ]
+      },
+      {
+        "id": 13,
+        "question": "האם קיבלת עזרה כלשהי עד עכשיו?",
+        "options": [
+          { "value": "received_but_insufficient", "text": "כן, אבל היא לא הספיקה" },
+          { "value": "not_received", "text": "לא, אני מחפש/ת עזרה עכשיו" }
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "criteria": { "age": "under_18" },
+        "recommendation": "מוקד 105 - המטה הלאומי להגנה על ילדים ברשת"
+      },
+      {
+        "criteria": { "immediate_danger": "yes" },
+        "recommendation": "משטרת ישראל - התקשרו 100 למקרי חירום"
+      },
+      {
+        "criteria": { "violence_type": "physical", "family_violence": "yes" },
+        "recommendation": "עמותת ל.א. לאלימות נגד נשים"
+      },
+      {
+        "criteria": { "gender": "female", "religion": "ultra_orthodox", "sexual_assault": "yes" },
+        "recommendation": "תהל - מרכז סיוע לנשים דתיות וחרדיות"
+      },
+      {
+        "criteria": { "violence_type": "cyber_extortion" },
+        "recommendation": "מא'את - עמותת סייבר חברתית"
+      },
+      {
+        "criteria": { "images_seen": "yes" },
+        "recommendation": "עמותת לתת פה"
+      },
+      {
+        "criteria": { "violence_type": "emotional" },
+        "recommendation": "הרשות הלאומית לביטחון קהילתי"
+      }
+    ]
+  }
+  

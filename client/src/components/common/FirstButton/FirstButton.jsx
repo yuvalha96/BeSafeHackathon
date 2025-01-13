@@ -3,6 +3,8 @@ import styles from './FirstButton.module.css';
 
 const FirstButton = ({ children, onClick, disabled }) => {
   return (
+    <div className={styles['button-container']}>
+      
     <button
       className={styles.button}
       onClick={onClick}
@@ -10,6 +12,8 @@ const FirstButton = ({ children, onClick, disabled }) => {
     >
       {children}
     </button>
+    </div>
+
   );
 };
 

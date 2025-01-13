@@ -1,10 +1,51 @@
 .home {
-  text-align: center;
+  display: flex;
+  flex-direction: column; /* משנה את כיוון הפריסה לעמודה */
+  align-items: center; /* ממרכז את כל האלמנטים אופקית */
   padding: 20px;
 }
 
 .headline {
-  font-size: 2em;
+  font-family: 'Calibri';
+  font-size: 3.8em;
+  color: #000000;
+  align-items: right;
+  letter-spacing: 12px;
+  width: 70%;
   margin-bottom: 20px;
-  color: #53474F;
+}
+
+.subheading {
+  font-family: 'Calibri'; 
+  font-size: 1.6em;
+  color: #694bff;
+  line-height: 1.5;
+  align-items: right;
+  margin-bottom: 10px; /* מוסיף רווח מתחת */
+  width: 70%;
+}
+
+.description {
+  font-family: 'Calibri';
+  font-size: 1.6em;
+  color: #000000;
+  line-height: 1.5;
+  text-align: right; /* ממקם את הטקסט מימין */
+  margin-bottom: 20px; /* מוסיף רווח מתחת */
+  width: 70%;
+}
+
+.image {
+  height: 650px;
+  margin-bottom: 30px; /* מוסיף רווח מתחת לתמונה */
+}
+
+
+.text-container {
+  text-align: right; /* מבטיח שכל הטקסטים בתוך הקונטיינר מימין */
+  width: 100%; /* מתאים את הרוחב */
+}
+
+.start-button {
+  margin-top: 20px; /* רווח מעל הכפתור */
 }

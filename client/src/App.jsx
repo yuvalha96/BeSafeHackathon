@@ -1,15 +1,13 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import Home from './pages/HomePage/HomePage';
 import RecommendationPage from './pages/RecommendationPage/RecommendationPage.jsx';
 import styles from './styles/App.module.css';
-import Questions from './pages/QuestionsPage/Questions'
 import projectLogo2 from './assets/project-logo (2).png';
 
-
 function App() {
-  // Mock organization data for demonstration
   const organizations = [
     {
+      id: '105',
       name: 'מוקד 105',
       description: 'המטה הלאומי להגנה על ילדים ברשת',
       email: 'support@example.com',
@@ -17,7 +15,8 @@ function App() {
       website: 'https://www.gov.il/he/pages/national_service_at_105_030422',
     },
     {
-      name: 'ארגון נוסף',
+      id: '100',
+      name: 'משטרה',
       description: 'תיאור קצר על הארגון',
       email: 'another@example.com',
       phone: '123-456-7890',
@@ -37,13 +36,11 @@ function App() {
         <main className={styles.main}>
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* Dynamic route to display a specific organization */}
             <Route 
-              path="/recommendation" 
+              path="/recommendation/:id" 
               element={<RecommendationPage organizations={organizations} />} 
             />
-          </Routes>
-          <Routes>
-            <Route path="/questions" element={<Questions />} />
           </Routes>
         </main>
         <footer className={styles.footer}>

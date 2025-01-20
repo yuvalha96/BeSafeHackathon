@@ -1,5 +1,5 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import orgData from '../../server/data/duckData';
+// import orgData from '../../server/data/duckData';
 import projectLogo2 from './assets/project-logo (2).png';
 import Home from './pages/HomePage/HomePage';
 import Questions from './pages/QuestionsPage/Questions';

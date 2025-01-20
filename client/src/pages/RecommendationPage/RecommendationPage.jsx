@@ -69,6 +69,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import OrganizationCard from '../../components/OrganizationCard/OrganizationCard';
 import styles from './RecommendationPage.module.css';
+import RelaxSection from '../../components/button/RelaxSection';
+import FirstHelp from '../../components/FirstHelp/FirstHelp';
+import firstHelpData from '../../components/FirstHelp/firstHelpData.json';
 
 function RecommendationPage() {
   const { id } = useParams();
@@ -121,6 +124,8 @@ function RecommendationPage() {
       <h4>פרטי יצירת קשר</h4>
       <p>על סמך התשובות שלך, אנו ממליצים ליצור קשר עם הארגון הבא:</p>
       <OrganizationCard organization={recData} />
+      עד שתקבל את העזרה מהגורם שפנית אליו, תוכלי/י להעזר באחד המענים
+      <FirstHelp items={firstHelpData} />
     </div>
   );
 }

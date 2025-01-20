@@ -1,85 +1,85 @@
-const organizations = [
-    {
-        "id": "1",
-        "name": "מוקד 105",
-        "description": "המטה הלאומי להגנה על ילדים ברשת",
-        "email": "listen@police.gov.il",
-        "phone": "105",
-        "website": "https://www.gov.il/he/pages/national_service_at_105_030422"
-    },
-    {
-        "id": "2",
-        "name": "האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-נשים",
-        "description": "קווי החירום לנפגעות ולנפגעי תקיפה מינית",
-        "email": "office@igud1202.org.il",
-        "phone": "1202",
-        "website": "https://www.1202.org.il/"
+// const organizations = [
+//     {
+//         "id": "1",
+//         "name": "מוקד 105",
+//         "description": "המטה הלאומי להגנה על ילדים ברשת",
+//         "email": "listen@police.gov.il",
+//         "phone": "105",
+//         "website": "https://www.gov.il/he/pages/national_service_at_105_030422"
+//     },
+//     {
+//         "id": "2",
+//         "name": "האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-נשים",
+//         "description": "קווי החירום לנפגעות ולנפגעי תקיפה מינית",
+//         "email": "office@igud1202.org.il",
+//         "phone": "1202",
+//         "website": "https://www.1202.org.il/"
 
-    },
-    {
-        "id": "3",
-        "name": "האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-גברים",
-        "description": "קווי החירום לנפגעות ולנפגעי תקיפה מינית",
-        "email": "office@igud1203.org.il",
-        "phone": "1203",
-        "website": "https://www.1203.org.il/"
+//     },
+//     {
+//         "id": "3",
+//         "name": "האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-גברים",
+//         "description": "קווי החירום לנפגעות ולנפגעי תקיפה מינית",
+//         "email": "office@igud1203.org.il",
+//         "phone": "1203",
+//         "website": "https://www.1203.org.il/"
 
-    },
-    {
-        "id": "4",
-        "name": "עמותת ל.א. לאלימות נגד נשים",
-        "description": "מושיטה יד לנשים וילדיהן נגד אלימות",
-        "email": "contact@no2violence.co.il",
-        "phone": "6724*",
-        "website": "https://no2violence.co.il/"
+//     },
+//     {
+//         "id": "4",
+//         "name": "עמותת ל.א. לאלימות נגד נשים",
+//         "description": "מושיטה יד לנשים וילדיהן נגד אלימות",
+//         "email": "contact@no2violence.co.il",
+//         "phone": "6724*",
+//         "website": "https://no2violence.co.il/"
 
-    },
-    {
-        "id": "5",
-        "name": "ארגון נשים נגד אלימות",
-        "description": " קו לנפגעות אלימות פיזית ומינית לנשים ערביות",
-        "email": "not exist",
-        "phone": "04-6566813",
-        "website": "https://www.wavo.org/he"
+//     },
+//     {
+//         "id": "5",
+//         "name": "ארגון נשים נגד אלימות",
+//         "description": " קו לנפגעות אלימות פיזית ומינית לנשים ערביות",
+//         "email": "not exist",
+//         "phone": "04-6566813",
+//         "website": "https://www.wavo.org/he"
 
-    },
-    {
-        "id": "6",
-        "name": "תהל",
-        "description": " מרכז סיוע לנשים דתיות וחרדיות",
-        "email": " office@crisiscenter.org.il",
-        "phone": "02-6730002",
-        "website": "https://www.1202.org.il/local/tahel"
+//     },
+//     {
+//         "id": "6",
+//         "name": "תהל",
+//         "description": " מרכז סיוע לנשים דתיות וחרדיות",
+//         "email": " office@crisiscenter.org.il",
+//         "phone": "02-6730002",
+//         "website": "https://www.1202.org.il/local/tahel"
 
-    },
-    {
-        "id": "7",
-        "name": "מא'את",
-        "description": " עמותת סייבר חברתית",
-        "email": " not exist",
-        "phone": "not exist",
-        "website": "https://projectmaat.com/"
+//     },
+//     {
+//         "id": "7",
+//         "name": "מא'את",
+//         "description": " עמותת סייבר חברתית",
+//         "email": " not exist",
+//         "phone": "not exist",
+//         "website": "https://projectmaat.com/"
 
-    },
-    {
-        "id": "8",
-        "name": "עמותת לתת פה",
-        "description": "תכניות חינוכיות בנושאי מוגנות מינית, מוגנות ברשת, שיח רגשי וקשר בין הורים וילדים.",
-        "email": " office@latetpe.org.il",
-        "phone": "02-9918030",
-        "website": "https://latetpe.org.il/"
+//     },
+//     {
+//         "id": "8",
+//         "name": "עמותת לתת פה",
+//         "description": "תכניות חינוכיות בנושאי מוגנות מינית, מוגנות ברשת, שיח רגשי וקשר בין הורים וילדים.",
+//         "email": " office@latetpe.org.il",
+//         "phone": "02-9918030",
+//         "website": "https://latetpe.org.il/"
 
-    },
-    {
-        "id": "9",
-        "name": "הרשות הלאומית לביטחון קהילתי",
-        "description": "  עמותה המובילה את המאמץ הממשלתי למניעת אלימות, פשיעה, ושימוש בחומרים פסיכואקטיביים, ואלכוהול ",
-        "email": " not exist",
-        "phone": "1299",
-        "website": "https://projectmaat.com/"
+//     },
+//     {
+//         "id": "9",
+//         "name": "הרשות הלאומית לביטחון קהילתי",
+//         "description": "  עמותה המובילה את המאמץ הממשלתי למניעת אלימות, פשיעה, ושימוש בחומרים פסיכואקטיביים, ואלכוהול ",
+//         "email": " not exist",
+//         "phone": "1299",
+//         "website": "https://projectmaat.com/"
 
-    }
-];
+//     }
+// ];
 
 const orgData = {
     1: {
@@ -88,6 +88,70 @@ const orgData = {
         "email": "listen@police.gov.il",
         "phone": "105",
         "website": "https://www.gov.il/he/pages/national_service_at_105_030422"
+    },
+    2:{
+        "name": "האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-נשים",
+        "description": "קווי החירום לנפגעות ולנפגעי תקיפה מינית",
+        "email": "office@igud1202.org.il",
+        "phone": "1202",
+        "website": "https://www.1202.org.il/"
+
+    },
+    3:{
+        "name": "האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-גברים",
+        "description": "קווי החירום לנפגעות ולנפגעי תקיפה מינית",
+        "email": "office@igud1203.org.il",
+        "phone": "1203",
+        "website": "https://www.1203.org.il/"
+
+    },
+    4:{
+        "name": "עמותת ל.א. לאלימות נגד נשים",
+        "description": "מושיטה יד לנשים וילדיהן נגד אלימות",
+        "email": "contact@no2violence.co.il",
+        "phone": "6724*",
+        "website": "https://no2violence.co.il/"
+
+    },
+    5:{
+        "name": "ארגון נשים נגד אלימות",
+        "description": " קו לנפגעות אלימות פיזית ומינית לנשים ערביות",
+        "email": "not exist",
+        "phone": "04-6566813",
+        "website": "https://www.wavo.org/he"
+
+    },
+    6:{
+        "name": "תהל",
+        "description": " מרכז סיוע לנשים דתיות וחרדיות",
+        "email": " office@crisiscenter.org.il",
+        "phone": "02-6730002",
+        "website": "https://www.1202.org.il/local/tahel"
+
+    },
+    7:{
+        "name": "מא'את",
+        "description": " עמותת סייבר חברתית",
+        "email": " not exist",
+        "phone": "not exist",
+        "website": "https://projectmaat.com/"
+
+    },
+    8:{
+        "name": "עמותת לתת פה",
+        "description": "תכניות חינוכיות בנושאי מוגנות מינית, מוגנות ברשת, שיח רגשי וקשר בין הורים וילדים.",
+        "email": " office@latetpe.org.il",
+        "phone": "02-9918030",
+        "website": "https://latetpe.org.il/"
+
+    },
+    9:{
+        "name": "הרשות הלאומית לביטחון קהילתי",
+        "description": "  עמותה המובילה את המאמץ הממשלתי למניעת אלימות, פשיעה, ושימוש בחומרים פסיכואקטיביים, ואלכוהול ",
+        "email": " not exist",
+        "phone": "1299",
+        "website": "https://projectmaat.com/"
+
     }
 }
 

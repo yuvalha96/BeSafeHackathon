@@ -120,7 +120,6 @@ function RecommendationPage() {
     <div className={styles.recommendationPage}>
       <h4>פרטי יצירת קשר</h4>
       <p>על סמך התשובות שלך, אנו ממליצים ליצור קשר עם הארגון הבא:</p>
-      <div>{ `hii ${recData}` }</div>
       <OrganizationCard organization={recData} />
     </div>
   );

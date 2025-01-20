@@ -20,7 +20,10 @@
     font-size: 1.0em;
 }
 
+.previous-button,
+.next-button,
 .submit-button {
+    margin: 30px;
     padding: 10px;
     margin-bottom: 90px;
     border-radius: 5px;
@@ -29,4 +32,33 @@
     cursor: pointer;
     font-family: 'Calibri'; 
     font-size: 1.3em;
+}
+
+/* סגנון מסגרות עבור כל מקבץ */
+.questions-group {
+    border: 2px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 50%; /* רוחב המסגרת */
+    max-width: 700px; /* הגבלת רוחב מקסימלי */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* צבעי רקע פסטליים עבור כל מקבץ */
+.group-blue {
+    background-color: #d6e6f2;
+}
+
+.group-yellow {
+    background-color: #fff4cc;
+}
+
+.group-pink {
+    background-color: #fde2e2;
+}
+
+.group-green {
+    background-color: #d8f3dc;
 }

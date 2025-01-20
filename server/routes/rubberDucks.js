@@ -1,12 +1,12 @@
 import express from 'express';
 import {
     createDuck,
-    getAllDucks,
+    getAllOrganizations,
     getSingleDuck,
     deleteDuck,
     updateDuck,
     getRandomDuck,
-    getData,
+    getTheOrganizations
 } from '../controllers/rubberDuckController.js';
 
 const router = express.Router();
@@ -15,7 +15,7 @@ const router = express.Router();
  * Read Only Permission Routes
  */
 // GET all ducks
-router.get('/', getAllDucks)
+router.get('/', getAllOrganizations)
 
 // GET a random duck
 router.get('/random', getRandomDuck);
@@ -24,7 +24,7 @@ router.get('/random', getRandomDuck);
 router.get('/:id', getSingleDuck)
 
 // a demo route
-router.post('/demo', getData)
+router.get('/recommendation', getTheOrganizations)
 
 /**
  * Read and Write Permission Routes

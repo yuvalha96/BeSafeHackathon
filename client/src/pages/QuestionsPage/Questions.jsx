@@ -1,9 +1,15 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import categories from './categories.json';
 import './Questions.css';
 
 function Questions() {
     const [answers, setAnswers] = useState({});
+    const [currentPage, setCurrentPage] = useState(0);
+    const navigate = useNavigate();
+
+    const questionsPerPage = 3;
+    const totalPages = Math.ceil(categories.questions.length / questionsPerPage);
 
     const handleAnswer = (questionId, answer) => {
         setAnswers((prevAnswers) => ({
@@ -12,90 +18,83 @@ function Questions() {
         }));
     };
 
-    const handleSubmit = () => {
-        const recommendations = [];
-    
-        // Extracting answers for easier access
-        const {
-            1: age,
-            2: gender,
-//            3: personal,
-//            4: incidentTime,
-            5: sexualAbuse,
-            6: graphicContent,
-            7: abuseType,
-            8: familyViolence,
-            9: culturalBackground,
-            10: fearToShare,
-//            11: recurringAbuse,
-            12: urgency,
-//            13: previousHelp,
-        } = answers;
-    
-        // Logic for recommendations
-        if (age === "under_18" || graphicContent === "yes") {
-            recommendations.push("מוקד 105 - ילדים ונוער");
-        }
-        if ((sexualAbuse === "yes" || abuseType === "physical") & (gender=='female')) {
-            recommendations.push("  האיגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-נשים");
-        }
-        if ((sexualAbuse === "yes" || abuseType === "physical")&(gender=='male')) {
-            recommendations.push("איגוד ומרכזי הסיוע לנפגעות ונפגעי תקיפה מינית-גברים");
-        }
-        if (familyViolence === "yes" && gender === "female") {
-            recommendations.push("עמותת ל.א. לאלימות נגד נשים");
-        }
-        if (culturalBackground === "muslim" && (familyViolence === "yes" || sexualAbuse === "yes")) {
-            recommendations.push("ארגון נשים נגד אלימות");
-        }
-        if (culturalBackground === "religious" || culturalBackground === "ultra_orthodox") {
-            recommendations.push("תהל - מרכז סיוע לנשים דתיות וחרדיות");
-        }
-        if (abuseType === "cyber_extortion" || abuseType === "content_distribution") {
-            recommendations.push("מא'את - עמותת סייבר חברתית");
-        }
-        if (fearToShare === "yes" && gender === "female") {
-            recommendations.push("עמותת לתת פה");
-        }
-        if (urgency === "immediate_danger") {
-            recommendations.push("הרשות הלאומית לביטחון קהילתי");
-        }
-    
-        // Remove duplicates and display recommendations
-        const uniqueRecommendations = [...new Set(recommendations)];
-    
-        if (uniqueRecommendations.length > 0) {
-            alert(`העמותות המומלצות עבורך הן:\n${uniqueRecommendations.join("\n")}`);
+    const handleNext = () => {
+        const currentQuestions = categories.questions.slice(
+            currentPage * questionsPerPage,
+            (currentPage + 1) * questionsPerPage
+        );
+
+        const allAnswered = currentQuestions.every((q) => answers[q.id]);
+        if (allAnswered) {
+            setCurrentPage(currentPage + 1);
         } else {
-            alert("לא הצלחנו לזהות עמותה מתאימה. נסה למקד אותנו יותר בתשובות.");
+            alert('יש להשיב על כל השאלות לפני המעבר לעמוד הבא');
         }
     };
-    
+
+    const handlePrevious = () => {
+        if (currentPage > 0) {
+            setCurrentPage(currentPage - 1);
+        }
+    };
+
+    const handleSubmit = () => {
+        // המלצות (במקום לשלוח לשרת יש כאן את הלוגיקה פשוטה)
+        let recommendation = 0;
+        if (answers[1] === "under_18" || answers[6] === "yes") recommendation = 1;
+        if ((answers[5] === "yes" || answers[7] === "physical") && answers[2] === 'female') recommendation = 2;
+        if ((answers[5] === "yes" || answers[7] === "physical") && answers[2] === 'male') recommendation = 3;
+        // המשך הלוגיקה כאן...
+
+        // ניווט לדף המלצה
+        navigate(`/recommendation/${recommendation}`);
+    };
+
+    const currentQuestions = categories.questions.slice(
+        currentPage * questionsPerPage,
+        (currentPage + 1) * questionsPerPage
+    );
+
+    const groupClasses = ['group-blue', 'group-yellow', 'group-pink', 'group-green'];
 
     return (
         <div>
-            {categories.questions.map((q) => (
-                <div key={q.id} className="question-container">
-                    <p>{q.question}</p>
-                    <select
-                        value={answers[q.id] || ''}
-                        onChange={(e) => handleAnswer(q.id, e.target.value)}
-                        className="select-input"
-                    >
-                        <option value="" disabled>
-                            בחר/י תשובה
-                        </option>
-                        {q.options.map((option) => (
-                            <option key={option.value} value={option.value}>
-                                {option.text}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-            ))}
-            <button onClick={handleSubmit} className="submit-button">
-                סיום שאלון
-            </button>
+            <div className={`questions-group ${groupClasses[currentPage % groupClasses.length]}`}>
+                {currentQuestions.map((q) => (
+                    <div key={q.id} className="question-container">
+                        <p>{q.question}</p>
+                        <select
+                            value={answers[q.id] || ''}
+                            onChange={(e) => handleAnswer(q.id, e.target.value)}
+                            className="select-input"
+                        >
+                            <option value="" disabled>בחר/י תשובה</option>
+                            {q.options.map((option) => (
+                                <option key={option.value} value={option.value}>
+                                    {option.text}
+                                </option>
+                            ))}
+                        </select>
+                    </div>
+                ))}
+            </div>
+
+            <div className="button-container">
+                {currentPage > 0 && (
+                    <button onClick={handlePrevious} className="previous-button">
+                        לעמוד הקודם
+                    </button>
+                )}
+                {currentPage < totalPages - 1 ? (
+                    <button onClick={handleNext} className="next-button">
+                        לעמוד הבא
+                    </button>
+                ) : (
+                    <button onClick={handleSubmit} className="submit-button">
+                        סיום שאלון
+                    </button>
+                )}
+            </div>
         </div>
     );
 }
